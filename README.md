@@ -34,10 +34,13 @@ yarn build react,shared,scheduler,react-reconciler,react-dom --type=NODE
 ```js
 // 创建项目
 npx create-react-app react-app
+// 必须使用yarn安装不要使用npm，如果默认是npm安装则重新使用yarn安装，否则link可能失败
+yarn install
 ```
 + 创建链接
 
 ```js
+// 进入react17目录
 // link react
 cd build/node_modules/react
 yarn link
@@ -53,5 +56,12 @@ yarn link
 // 进入 react-app 项目目录后
 yarn link react react-dom
 // 启动项目
-npm run start
+yarn start
 ```
+
++ 本地验证
+
+在 编译好的 react-dom.development.js文件中增加日志,并运行react-app查看控制台
+
+
+
